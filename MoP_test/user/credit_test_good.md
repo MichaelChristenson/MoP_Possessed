@@ -1,0 +1,14 @@
+| previous status|new status|previous count|new count|previous daily count|remaining|new daily count|previous funds|new funds|client start|client end|previous timestamp |previous failed attempts |
+| ---------------|----------|--------------|---------|--------------------|---------|---------------|--------------|---------|------------|----------|-------------------|------------------------ |
+| good           |good      |0             |max / 2  |0                   |max / 2  |max / 2        |0             |max / 2  |0           |max / 2   |today              |0                        |
+| good           |good      |0             |max / 2  |max / 2             |0        |max            |0             |max / 2  |0           |max / 2   |today              |0                        |
+| limited        |good      |0             |max / 2  |0                   |0        |max / 2        |0             |max / 2  |0           |max / 2   |today              |0                        |
+| limited        |good      |0             |max / 2  |max / 2             |max / 2  |max            |0             |max / 2  |0           |max / 2   |today              |0                        |
+| warning        |good      |0             |max / 2  |0                   |0        |max / 2        |0             |max / 2  |0           |max / 2   |today              |0                        |
+| warning        |good      |0             |max / 2  |max / 2             |max / 2  |max            |0             |max / 2  |0           |max / 2   |today              |0                        |
+| good           |good      |0             |max / 2  |max * 3 / 4         |50       |max / 2        |0             |max / 2  |0           |max / 2   |2017-01-09 00:00:00|0                        |
+| good           |good      |0             |max / 2  |max * 3 / 4         |50       |max / 2        |0             |max / 2  |0           |max / 2   |2017-01-09 00:00:00|max                      |
+| limited        |good      |0             |max / 2  |max * 3 / 4         |50       |max / 2        |0             |max / 2  |0           |max / 2   |2017-01-09 00:00:00|0                        |
+| limited        |good      |0             |max / 2  |max * 3 / 4         |50       |max / 2        |0             |max / 2  |0           |max / 2   |2017-01-09 00:00:00|max                      |
+| warning        |good      |0             |max / 2  |max * 3 / 4         |50       |max / 2        |0             |max / 2  |0           |max / 2   |2017-01-09 00:00:00|0                        |
+| warning        |good      |0             |max / 2  |max * 3 / 4         |50       |max / 2        |0             |max / 2  |0           |max / 2   |2017-01-09 00:00:00|max                      |
