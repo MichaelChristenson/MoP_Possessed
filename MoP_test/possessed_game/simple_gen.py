@@ -139,8 +139,6 @@ def test_role_{role}(self):
             extract += [item['name']]
             if item['partner']:
                 partner[item['name']]=item['partner']
-        #partner['Assassin']='Silencer'
-        #partner['Silencer']='Assassin'
         for subject in extract:
             if subject in EXCLUDE + SAFE + taken:
                 continue
@@ -170,6 +168,12 @@ def test_role_{role}(self):
         open('simple_role.py', 'w').write(header_template.format(funcs = funcs))
 
     def import_from_id(self,game_id):
+        """
+        Pulls information from a given game_id and generates a .md
+        file that expresses the data sufficiently to be read by simple_*
+        :param game_id: the database ID that represents the game to be generated
+        :return: None
+        """
         self.generate_role_tests()
         conn = Connection('Admin-User', self.local_data.admin_password, 'user/login', base_uri=self.SERVER,
                           proxies=PROXIES if self.SERVER not in [PROXY_DEBUG_SERVER, PROXY_AWS_SERVER] else None)
@@ -270,7 +274,7 @@ def test_role_{role}(self):
     def generate_many(cls):
         """
         Generates 10 random test games, then prints out the functions necessary to run them
-        :return:
+        :return: None
         """
         test = []
         for i in range(10):
@@ -279,6 +283,11 @@ def test_role_{role}(self):
             print("""\tdef %s(self):\n\t\tself.automated_game_against_file(self.get_file_from_test_name())""" % test[i])
 
     def automated_game_against_file(self, filename):
+        """
+        Reads in the file and executes the game represented by that file.
+        :param filename: file in question, with the path relative to execution
+        :return: None
+        """
         print('\n\n'+filename.replace('answers/','')+'\n\n')
         result_file = relative_path(filename.replace('answers', 'results'))
 
