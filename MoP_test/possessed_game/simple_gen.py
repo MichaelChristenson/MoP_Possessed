@@ -83,7 +83,6 @@ class PossessedBaseTest(BaseTest):
                     roles += [[available[index]]]
                     available = available[:index]+available[index+1:]
 
-
         seed = int(100 * random())
         tables['Roles'] = SeabornTable(table = roles, columns = ROLES_TABLE)
         tables['Setup'] = SeabornTable(table = [[seed, players, int(8 * random() + 2)]],
@@ -270,7 +269,6 @@ def test_role_{role}(self):
                     report[key]=SeabornTable(columns=COLUMNS[subject],table=tables[key].table)
         open('answers/' + file, 'w').write(SeabornTable.objs_to_mark_down(report))
 
-
     def generate_many(cls):
         """
         Generates 10 random test games, then prints out the functions necessary to run them
@@ -375,7 +373,6 @@ def test_role_{role}(self):
 
     def generate_test_based_on_game_id(self, game_id=1):
         self.import_from_id(game_id)
-
 
 def slip(roster, target, designate):
     if type(target)==list:
